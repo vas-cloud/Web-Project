@@ -3,20 +3,9 @@ const Entry = document.querySelector('.todo');
 const Button = document.querySelector('.Add');
 const List = document.querySelector('.todo-list');
 const Save = document.querySelector('.save')
-
-
-
-
 // Event Listeners
 Button.addEventListener('click', addtodo);
 List.addEventListener('click', DeletCheck);
-
-
-
-
-
-
-
 
 // functions
 function addtodo(event) {
