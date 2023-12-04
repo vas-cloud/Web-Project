@@ -1,0 +1,97 @@
+/* static/style.css
+
+.cursor{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* z-index: 999;
+    position: absolute;
+    background-color: white;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1); */
+
+    /* pointer-events: none; */
+    
+/* } */ 
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #000000;
+    color: #EAECEE;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    letter-spacing: 10;
+    color: #3498DB;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom:50px ;
+    font-size: 40px;
+}
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    margin-top: 20px;
+    /* background-color: red; */
+    position: relative;
+    bottom: 5%;
+    width: 70%;
+    text-align: center;
+    outline: none;
+
+}
+
+#bot{
+    background-color: #3498DB;
+    margin: 35px auto;
+    width:min-content;
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    list-style: none;
+    font-family:'JetBrains Mono', monospace;
+}
+#user{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    color: #000000;
+    font-family:'JetBrains Mono', monospace;
+}
+input {
+    padding: 10px;
+    font-size: 20px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #2C3E50;
+    color: #EAECEE;
+    cursor: pointer;
+    width: 10%;
+    transition: ease 0.3s;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color:rgb(153, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
