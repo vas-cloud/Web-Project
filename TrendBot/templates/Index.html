@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\user\Downloads\OIP.jpg" type="image/x-icon">
+    <title>TrendBot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="cursor"></div>
+    <h1>TrendBot</h1>
+    
+    <div id="user">
+        {% if user_msg %}
+        <p>You: {{ user_msg }}</p>
+        {% endif %}
+    </div>
+    <div id="bot">
+        {% if bot_msg %}
+            <p>TrendBot:</p>
+            <ul>
+                {% for point in bot_msg.split('\n') %}
+                    {% if point %}
+                        <li>{{ point }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    <div id="form">
+        <form action="{{ url_for('process') }}" method="post">
+            <input type="text" name="msg" placeholder="Type your message..." required>
+            <button type="submit"><i class="ri-send-plane-line"></i></button>
+        </form>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+
+</body>
+</html> 
+<!-- templates/index.html -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome</h1>
+
+    <form action="{{ url_for('process') }}" method="post">
+        <input type="text" name="msg" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+
+    <div>
+        {% if user_msg %}
+            <p>You: {{ user_msg }}</p>
+        {% endif %}
+        {% if bot_msg %}
+            <p>TrendBot:</p>
+            <ul>
+                {% for point in bot_msg.split('\n') %}
+                    {% if point %}
+                        <li>{{ point }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> -->
